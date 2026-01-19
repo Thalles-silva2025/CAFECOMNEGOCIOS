@@ -33,6 +33,7 @@ model EventLog {
   eventName String
   eventId   String
   leadId    String?
+  payload   String
   payload   Json
   createdAt DateTime @default(now())
   lead      Lead?    @relation(fields: [leadId], references: [id])

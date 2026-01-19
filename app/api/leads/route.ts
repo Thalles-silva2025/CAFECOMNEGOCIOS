@@ -48,6 +48,7 @@ export async function POST(request: NextRequest) {
       eventName: "lead_form_submit",
       eventId: body.event_id ?? "",
       leadId: lead.id,
+      payload: JSON.stringify(body)
       payload: body
     }
   });

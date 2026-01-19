@@ -13,6 +13,7 @@ export async function POST() {
     data: {
       eventName: "checkout_create",
       eventId: "stub",
+      payload: JSON.stringify(stubPix)
       payload: stubPix
     }
   });

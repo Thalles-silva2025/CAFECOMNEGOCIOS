@@ -8,6 +8,7 @@ export async function POST(request: NextRequest) {
     data: {
       eventName: body.event,
       eventId: body.event_id ?? "",
+      payload: JSON.stringify(body)
       payload: body
     }
   });
