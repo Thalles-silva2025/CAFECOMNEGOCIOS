@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-latte text-espresso antialiased;
+  background: radial-gradient(circle at top, #fff7ed 0%, #f7f4f0 45%, #f3efe9 100%);
+}
+
+.container-safe {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full border border-espresso/10 bg-white/80 px-3 py-1 text-xs font-medium text-espresso/80 shadow-sm;
+}
+
+.section-title {
+  @apply text-2xl font-semibold text-espresso sm:text-3xl;
+}
+
+.card {
+  @apply rounded-3xl border border-espresso/10 bg-white/90 p-6 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.45)];
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-espresso px-6 py-3 text-sm font-semibold text-white transition hover:bg-espresso/90;
+  box-shadow: 0 16px 40px -24px rgba(17, 24, 39, 0.9);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-espresso/30 bg-white/80 px-6 py-3 text-sm font-semibold text-espresso transition hover:border-espresso/60;
+}
+
+.glass {
+  @apply rounded-3xl border border-white/30 bg-white/70 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.4)] backdrop-blur;
+}
