@@ -14,6 +14,7 @@ export async function POST() {
       eventName: "checkout_create",
       eventId: "stub",
       payload: JSON.stringify(stubPix)
+      payload: stubPix
     }
   });
 
