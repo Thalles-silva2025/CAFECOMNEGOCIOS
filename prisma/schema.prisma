@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  whatsapp  String
+  email     String?
+  company   String?
+  segment   String?
+  pain      String?
+  role      String?
+  revenue   String?
+  utmSource String?
+  utmMedium String?
+  utmCampaign String?
+  utmContent  String?
+  utmTerm     String?
+  score     Int      @default(0)
+  createdAt DateTime @default(now())
+  events    EventLog[]
+  purchases Purchase[]
+}
+
+model EventLog {
+  id        String   @id @default(cuid())
+  eventName String
+  eventId   String
+  leadId    String?
+  payload   Json
+  createdAt DateTime @default(now())
+  lead      Lead?    @relation(fields: [leadId], references: [id])
+}
+
+model Purchase {
+  id        String   @id @default(cuid())
+  leadId    String?
+  status    String
+  value     Float
+  currency  String
+  createdAt DateTime @default(now())
+  lead      Lead?    @relation(fields: [leadId], references: [id])
+}
