@@ -27,6 +27,7 @@ export default function ObrigadoPage() {
   return (
     <main className="min-h-screen bg-latte">
       <section className="container-safe py-16">
+        <div className="glass p-8 space-y-4">
         <div className="card space-y-4">
           <h1 className="text-3xl font-semibold text-espresso">
             Inscrição confirmada!

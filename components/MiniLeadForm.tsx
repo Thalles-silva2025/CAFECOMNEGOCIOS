@@ -35,6 +35,13 @@ export function MiniLeadForm() {
   };
 
   return (
+    <div className="card border border-accent/20 bg-white/90">
+      <div className="flex items-center justify-between">
+        <p className="text-sm font-semibold text-espresso">
+          Receba a validação rápida da Dany em 2 passos
+        </p>
+        <span className="badge">Two-step</span>
+      </div>
     <div className="card">
       <p className="text-sm font-semibold text-espresso">
         Receba a validação rápida da Dany em 2 passos

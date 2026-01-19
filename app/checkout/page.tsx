@@ -50,6 +50,7 @@ export default function CheckoutPage() {
               Café da Manhã de Precificação — 26/01/2026 • 08:00 • Torre Tokio
               (Sala 1107)
             </p>
+            <div className="glass p-6 text-sm text-espresso/70">
             <div className="card space-y-2 text-sm text-espresso/70">
               <p>Ingresso presencial (15 vagas)</p>
               <p className="text-lg font-semibold text-espresso">R$ 97,00</p>
@@ -76,6 +77,7 @@ export default function CheckoutPage() {
               Comprar pelo WhatsApp
             </a>
           </div>
+          <div className="glass p-6 space-y-4">
           <div className="card space-y-4">
             <h2 className="text-lg font-semibold text-espresso">PIX gerado</h2>
             {!pixCode ? (

@@ -34,6 +34,11 @@ export default function Home({
     <main className="bg-latte">
       <PageTracking />
       <ExitIntent whatsappUrl={whatsappUrl} />
+      <section className="relative overflow-hidden pb-20 pt-12">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,#fde68a20,transparent_55%)]" />
+        <div className="container-safe grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="space-y-6">
+            <div className="flex flex-wrap items-center gap-3">
       <section className="relative overflow-hidden pb-16 pt-10">
         <div className="container-safe grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
@@ -42,11 +47,14 @@ export default function Home({
                 <Image src={logoUrl} alt="Hub Business" width={140} height={48} />
               ) : null}
               <span className="badge">Presencial • Goiânia • 15 vagas</span>
+              <span className="badge">Ingresso único • R$97</span>
             </div>
             <h1 className="text-4xl font-semibold tracking-tight text-espresso sm:text-5xl">
               {headline}
             </h1>
             <p className="text-lg text-espresso/70">
+              Workshop prático e executivo: você sai com a lógica do preço aplicada no
+              seu negócio, considerando custos, impostos e margem.
               Workshop prático: você sai com a lógica do preço aplicada no seu
               negócio, considerando custos, impostos e margem.
             </p>
@@ -83,6 +91,39 @@ export default function Home({
               Workshop prático. Você sai com a lógica do preço aplicada no seu
               negócio.
             </p>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {[
+                ["90 min", "imersão direta"],
+                ["15 vagas", "escassez real"],
+                ["R$97", "investimento acessível"]
+              ].map(([title, desc]) => (
+                <div key={title} className="glass p-4 text-xs text-espresso/70">
+                  <p className="text-sm font-semibold text-espresso">{title}</p>
+                  <p>{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="space-y-6">
+            <div className="glass p-6">
+              <h2 className="text-lg font-semibold text-espresso">
+                Agenda estratégica da manhã
+              </h2>
+              <ul className="mt-4 space-y-3 text-sm text-espresso/70">
+                {[
+                  "Preço certo para cobrir custos e margem",
+                  "Planilha mental de custos fixos + impostos",
+                  "Precifica-Pro para validação rápida"
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <MiniLeadForm />
+          </div>
           </div>
           <MiniLeadForm />
         </div>
@@ -100,6 +141,9 @@ export default function Home({
             >
               Quero minha vaga
             </TrackableLink>
+          </div>
+          <div className="glass p-3">
+            <VideoPlayer videoUrl={videoUrl} />
           </div>
           <VideoPlayer videoUrl={videoUrl} />
           <TrackableLink
@@ -125,6 +169,10 @@ export default function Home({
             "Como usar o Precifica-Pro para conferir tudo em minutos"
           ].map((item) => (
             <div key={item} className="card text-sm text-espresso/80">
+              <p className="text-sm font-semibold text-espresso">{item}</p>
+              <p className="mt-2 text-xs text-espresso/60">
+                Mão na massa com método claro para sair com preço aplicável.
+              </p>
               {item}
             </div>
           ))}
@@ -139,6 +187,7 @@ export default function Home({
               Preencha rápido para resgatar sua vaga caso haja abandono e para a
               equipe entender seu cenário.
             </p>
+            <div className="glass p-4 text-sm text-espresso/70">
             <div className="card text-sm text-espresso/70">
               Bônus para quem falar com a equipe ao final: livro digital +
               condição especial no local.
@@ -166,6 +215,7 @@ export default function Home({
       </section>
 
       <section className="container-safe py-16">
+        <div className="glass p-8">
         <div className="rounded-3xl border border-espresso/10 bg-white p-8">
           <h2 className="section-title">Bônus + condição especial</h2>
           <p className="mt-3 text-sm text-espresso/70">
