@@ -2,23 +2,13 @@
 
 Landing page de alta conversão com tracking completo (GTM + dataLayer), checkout PIX stub e dashboard interno de leads.
 
-## Setup local
+## Deploy na Vercel (sem setup local)
 
-```bash
-npm install
-cp .env.example .env
-npm run prisma:generate
-npm run prisma:migrate
-npm run dev
-```
-
-A aplicação roda em `http://localhost:3000`.
-
-## Deploy na Vercel
-
-1. Crie um novo projeto na Vercel apontando para este repositório.
-2. Configure as variáveis de ambiente conforme o `.env.example`.
-3. Garanta que o build usa `npm run build`.
+1. Suba este repositório no GitHub/GitLab.
+2. Na Vercel, crie um novo projeto e selecione o repositório.
+3. Em **Environment Variables**, copie todas as chaves do `.env.example`.
+4. Garanta que o build usa `npm run build`.
+5. Clique em **Deploy**.
 
 ## Variáveis de ambiente
 
