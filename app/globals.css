@@ -17,6 +17,7 @@ body {
 
 .badge {
   @apply inline-flex items-center gap-2 rounded-full border border-espresso/10 bg-white/80 px-3 py-1 text-xs font-medium text-espresso/80 shadow-sm;
+  @apply inline-flex items-center gap-2 rounded-full border border-espresso/10 bg-white px-3 py-1 text-xs font-medium text-espresso/80;
 }
 
 .section-title {
@@ -25,6 +26,7 @@ body {
 
 .card {
   @apply rounded-3xl border border-espresso/10 bg-white/90 p-6 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.45)];
+  @apply rounded-2xl border border-espresso/10 bg-white p-6 shadow-sm;
 }
 
 .btn-primary {
@@ -38,4 +40,8 @@ body {
 
 .glass {
   @apply rounded-3xl border border-white/30 bg-white/70 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.4)] backdrop-blur;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-espresso/30 px-6 py-3 text-sm font-semibold text-espresso transition hover:border-espresso/60;
 }

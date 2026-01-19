@@ -42,6 +42,10 @@ export function MiniLeadForm() {
         </p>
         <span className="badge">Two-step</span>
       </div>
+    <div className="card">
+      <p className="text-sm font-semibold text-espresso">
+        Receba a validação rápida da Dany em 2 passos
+      </p>
       <p className="text-xs text-espresso/70">
         Informe seu nome e WhatsApp. Em seguida, finalize sua vaga.
       </p>

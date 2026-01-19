@@ -51,6 +51,7 @@ export default function CheckoutPage() {
               (Sala 1107)
             </p>
             <div className="glass p-6 text-sm text-espresso/70">
+            <div className="card space-y-2 text-sm text-espresso/70">
               <p>Ingresso presencial (15 vagas)</p>
               <p className="text-lg font-semibold text-espresso">R$ 97,00</p>
             </div>
@@ -77,6 +78,7 @@ export default function CheckoutPage() {
             </a>
           </div>
           <div className="glass p-6 space-y-4">
+          <div className="card space-y-4">
             <h2 className="text-lg font-semibold text-espresso">PIX gerado</h2>
             {!pixCode ? (
               <p className="text-sm text-espresso/70">

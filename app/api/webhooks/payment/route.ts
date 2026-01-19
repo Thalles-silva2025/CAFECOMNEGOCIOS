@@ -19,6 +19,7 @@ export async function POST(request: NextRequest) {
       eventName: "payment_webhook",
       eventId: body.event_id ?? "",
       payload: JSON.stringify(body)
+      payload: body
     }
   });
 
